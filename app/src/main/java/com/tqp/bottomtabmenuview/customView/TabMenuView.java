@@ -67,6 +67,13 @@ public class TabMenuView extends LinearLayout {
         mAnim_select = AnimationUtils.loadAnimation(mContext,R.anim.bottommenu_in_anim);
     }
 
+    /**
+     * 放入相应的资源，这里的ntitle和stitle放两个是因为有的APP可能会有不同的文字，如果不需要可以只取一个
+     * @param nd
+     * @param ntitle
+     * @param sd
+     * @param stitle
+     */
     public void setImageAndText(int nd, String ntitle, int sd, String stitle) {
         img_normal.setImageResource(nd);
         txt_normal.setText(ntitle);
