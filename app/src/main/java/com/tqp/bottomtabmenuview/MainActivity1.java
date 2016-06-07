@@ -89,4 +89,11 @@ public class MainActivity1 extends AppCompatActivity {
 
 	}
 
+	@Override
+	public void onBackPressed() {
+		super.onBackPressed();
+		MyApplication.tag = 0;
+		finish();
+	}
+
 }

@@ -14,6 +14,7 @@ import android.widget.TextView;
 import com.tqp.bottomtabmenuview.MainActivity1;
 import com.tqp.bottomtabmenuview.MyApplication;
 import com.tqp.bottomtabmenuview.R;
+import com.tqp.bottomtabmenuview.TestActivity;
 
 public class FragmentA extends Fragment {
 
@@ -44,8 +45,13 @@ public class FragmentA extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), MainActivity1.class);
-                startActivity(intent);
+                if (MyApplication.tag == 0){
+                    Intent intent = new Intent(getActivity(), MainActivity1.class);
+                    startActivity(intent);
+                }else if (MyApplication.tag == 1){
+                    Intent intent = new Intent(getActivity(), TestActivity.class);
+                    startActivity(intent);
+                }
             }
         });
     }
